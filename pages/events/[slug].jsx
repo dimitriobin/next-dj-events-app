@@ -1,11 +1,12 @@
+import Layout from "../../components/Layout";
 import { useRouter } from "next/router";
-import styles from "../../styles/Home.module.css";
+import styles from "../../styles/Layout.module.css";
 
 export default function EventPage() {
     const router = useRouter();
 
     return (
-        <div className={styles.container}>
+        <Layout>
             <h1>My event: {router.query.slug}</h1>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam
@@ -13,6 +14,6 @@ export default function EventPage() {
                 debitis vel in expedita minima, reiciendis dolore quae
                 similique.
             </p>
-        </div>
+        </Layout>
     );
 }

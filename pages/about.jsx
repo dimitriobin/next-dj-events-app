@@ -1,8 +1,9 @@
-import styles from "../styles/Home.module.css";
+import Layout from "../components/Layout";
+import styles from "../styles/Layout.module.css";
 
 export default function AboutPage() {
     return (
-        <div className={styles.container}>
+        <Layout title='About DJ Events'>
             <h1>About me</h1>
             <img
                 src={
@@ -46,6 +47,6 @@ export default function AboutPage() {
                 perferendis sint neque asperiores. Autem omnis aut assumenda.
                 Perspiciatis unde non quibusdam ut.
             </p>
-        </div>
+        </Layout>
     );
 }

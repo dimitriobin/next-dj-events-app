@@ -1,9 +1,10 @@
-import styles from "../../styles/Home.module.css";
+import Layout from "../../components/Layout";
+import styles from "../../styles/Layout.module.css";
 
 export default function EventsPage() {
     return (
-        <div className={styles.container}>
+        <Layout>
             <h1>My Events</h1>
-        </div>
+        </Layout>
     );
 }
