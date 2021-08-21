@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "cookie": "^0.4.1",
     "dayjs": "^1.10.6",
     "next": "^11.1.0",
     "qs": "^6.10.1",
