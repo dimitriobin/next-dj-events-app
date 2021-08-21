@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Layout from "@/components/Layout";
 import Modal from "@/components/Modal";
+import ImageUpload from "@/components/ImageUpload";
 import { API_URL } from "@/config/index";
 import styles from "@/styles/Form.module.css";
 import * as dayjs from "dayjs";
@@ -68,6 +69,14 @@ export default function EditEventPage({ evt }) {
             const evt = await res.json();
             router.push(`/events/${evt.slug}`);
         }
+    };
+
+    const imageUploaded = async (e) => {
+        const res = await fetch(`${API_URL}/events/${evt.id}`);
+        const data = await res.json();
+
+        setImagePreview(data.image.formats.thumbnail.url);
+        setShowModal(false);
     };
 
     return (
@@ -172,7 +181,7 @@ export default function EditEventPage({ evt }) {
             </div>
 
             <Modal show={showModal} onClose={() => setShowModal(false)}>
-                IMAGE UPLOAD
+                <ImageUpload evtId={evt.id} imageUploaded={imageUploaded} />
             </Modal>
         </Layout>
     );
