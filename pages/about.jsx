@@ -1,16 +1,19 @@
 import Layout from "@/components/Layout";
 import styles from "@/styles/Layout.module.css";
+import Image from "next/image";
 
 export default function AboutPage() {
     return (
         <Layout title='About DJ Events'>
             <h1>About me</h1>
-            <img
+            <Image
                 src={
                     "https://picsum.photos/400?random=" +
                     Math.floor(Math.random() * 100)
                 }
                 alt=''
+                width={400}
+                height={400}
             />
             <h2>Walter</h2>
             <p>
